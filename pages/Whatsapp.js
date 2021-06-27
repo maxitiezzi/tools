@@ -27,7 +27,7 @@ var link = 'https://api.whatsapp.com/send?phone='
 export default function Whatsapp({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>Open up Whatsapp.js to start working on your Whatsapp!</Text>
+      <Text>Introduce el numero</Text>
       <TextInput
         style={styles.input}
         onChangeText={(text) => {

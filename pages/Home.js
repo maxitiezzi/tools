@@ -2,16 +2,19 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
+const Separator = () => (
+  <View style={styles.separator} />
+);
 
 export default function Home({ navigation }) {
   return (
-    <View style={[{ width: "90%", margin: 10, backgroundColor: "red" }]}>
-      <Text>Herramientas</Text>
+    <View style={[{ width: "90%", margin: 10 }]}>
 
       <Button
         title="Facturas"
         onPress={() => navigation.navigate('Facturas')}
       />
+      <Separator />
       <Button
         title="Whatsapp"
         onPress={() => navigation.navigate('Whatsapp')}
@@ -29,6 +32,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   buttons: {
-    width: 10
+    width: 10,
+    marginTop: 10
+  },
+  separator: {
+    marginVertical: 8,
+    borderBottomColor: '#737373',
+    borderBottomWidth: StyleSheet.hairlineWidth,
   }
 });
